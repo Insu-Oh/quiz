@@ -1,4 +1,6 @@
 module.exports = {
-	publicPath: '/quiz/',
+	publicPath: process.env.NODE_ENV === 'production'
+	? '/quiz/'
+	: '/',
 	outputDir: 'docs'
-    }
+}

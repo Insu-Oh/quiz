@@ -391,6 +391,24 @@ export default {
         img: require('../assets/flags/panama.png'),
         isDone: false
       },
+      {
+        index: 53,
+        name: 'North Korea',
+        img: require('../assets/flags/north_korea.png'),
+        isDone: false
+      },
+      {
+        index: 54,
+        name: 'South Africa',
+        img: require('../assets/flags/south_africa.png'),
+        isDone: false
+      },
+      {
+        index: 55,
+        name: 'Morocco',
+        img: require('../assets/flags/morocco'),
+        isDone: false
+      },
       ]
     }
   },
