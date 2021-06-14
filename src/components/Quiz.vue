@@ -10,8 +10,8 @@
       <transition name="x" :css="$store.state.isEffect" mode="out-in">
         <div class="xPopup" v-if="settings.isXshown" @click="settings.isXshown = false" >X</div>
       </transition>
-      <h6>CHOOSE PROPER FLAG!</h6>
-      <h2>{{questions[settings.curQuestionNum].question}}</h2>
+      <h6>{{names.title}}</h6>
+      <h2>{{ questions[settings.curQuestionNum].question }}</h2>
 
       <!-- Answers -->
       <transition name="flags" mode="out-in" :css="$store.state.isEffect">
@@ -26,30 +26,30 @@
 
     <!-- Buttons -->
     <div class="buttons">
-      <button @click="displayPreviousQuestion" :class="{hover: $store.state.isEffect}">PREVIOUS</button>
-      <button @click="displayNextQuestion" :class="{hover: $store.state.isEffect}">NEXT</button>
+      <button @click="displayPreviousQuestion" :class="{hover: $store.state.isEffect}">{{ names.previousButton }}</button>
+      <button @click="displayNextQuestion" :class="{hover: $store.state.isEffect}">{{ names.nextButton }}</button>
     </div>
   </div>
   <div class="pauseField" v-if="settings.pause">
     <div class="box">
-      <h2>PAUSE</h2>
-      <button @click="settings.pause = !settings.pause" :class="{hover: $store.state.isEffect}">RESUME</button>
-      <router-link to="/option" :class="{hover: $store.state.isEffect}">OPTION</router-link>
-      <router-link to="/" :class="{hover: $store.state.isEffect}">HOME</router-link>
+      <h2>{{ names.puaseTitle }}</h2>
+      <button @click="settings.pause = !settings.pause" :class="{hover: $store.state.isEffect}">{{names.resumeButton}}</button>
+      <router-link to="/option" :class="{hover: $store.state.isEffect}">{{names.optionButton}}</router-link>
+      <router-link to="/" :class="{hover: $store.state.isEffect}">{{names.homeButton}}</router-link>
     </div>
   </div>
 
   <transition name="scoreboard">
     <div class="scoreBoard" v-if="scoreBoard.isShown">
       <div class="scoreBoardBox">
-        <h2>Congratulations!! You have completed all questions!</h2>
-          <p>Your incorrect answers: 
+        <h2>{{names.scoreBoardTitle}}</h2>
+          <p>{{names.wrongAnswers}} 
             <ul>
               <li v-for="name in scoreBoard.incorrectAnswers" :key="name">{{name}}</li>
             </ul>
             </p>
-          <router-link to="/level" :class="{hover: $store.state.isEffect}">START AGAIN</router-link>
-          <router-link to="/" :class="{hover: $store.state.isEffect}">GO BACK HOME</router-link>
+          <router-link to="/level" :class="{hover: $store.state.isEffect}">{{names.startagainButton}}</router-link>
+          <router-link to="/" :class="{hover: $store.state.isEffect}">{{names.sHomeButton}}</router-link>
       </div>
     </div>
   </transition>
@@ -62,6 +62,19 @@
 export default {
   data() {
     return {
+      names: {
+        title: '',
+        previousButton: '',
+        nextButton: '',
+        puaseTitle: '',
+        resumeButton: '',
+        optionButton: '',
+        homeButton: '',
+        scoreBoardTitle: '',
+        wrongAnswers: '',
+        startagainButton: '',
+        sHomeButton: '',
+      },
       scoreBoard: {
         isShown: false,
         incorrectAnswers: []
@@ -76,343 +89,400 @@ export default {
       flags: [{
         index: 0,
         name: 'Australia',
+        koreanName: '호주',
         img: require('../assets/flags/australia.png'),
         isDone: false
       },
       {
         index: 1,
         name: 'Brazil',
+        koreanName: '브라질',
         img: require('../assets/flags/brazil.png'),
         isDone: false
       },
       {
         index: 2,
         name: 'Canada',
+        koreanName: '캐나다',
         img: require('../assets/flags/canada.png'),
         isDone: false
       },
       {
         index: 3,
         name: 'China',
+        koreanName: '중국',
         img: require('../assets/flags/china.png'),
         isDone: false
       },
       {
         index: 4,
         name: 'France',
+        koreanName: '프랑스',
         img: require('../assets/flags/france.png'),
         isDone: false
       },
       {
         index: 5,
         name: 'Germany',
+        koreanName: '독일',
         img: require('../assets/flags/germany.png'),
         isDone: false
       },
       {
         index: 6,
         name: 'India',
+        koreanName: '인도',
         img: require('../assets/flags/india.png'),
         isDone: false
       },
       {
         index: 7,
         name: 'Italy',
+        koreanName: '이탈리아',
         img: require('../assets/flags/italy.png'),
         isDone: false
       },
       {
         index: 8,
         name: 'Japan',
+        koreanName: '일본',
         img: require('../assets/flags/japan.png'),
         isDone: false
       },
       {
         index: 9,
         name: 'Libya',
+        koreanName: '리비아',
         img: require('../assets/flags/libya.png'),
         isDone: false
       },
       {
         index: 10,
         name: 'Mexico',
+        koreanName: '맥시코',
         img: require('../assets/flags/mexico.png'),
         isDone: false
       },
       {
         index: 11,
         name: 'Mongolia',
+        koreanName: '몽골',
         img: require('../assets/flags/mongolia.png'),
         isDone: false
       },
       {
         index: 12,
         name: 'Russia',
+        koreanName: '러시아',
         img: require('../assets/flags/russia.png'),
         isDone: false
       },
       {
         index: 13,
         name: 'South Korea',
+        koreanName: '대한민국',
         img: require('../assets/flags/south_korea.png'),
         isDone: false
       },
       {
         index: 14,
         name: 'Spain',
+        koreanName: '스페인',
         img: require('../assets/flags/spain.png'),
         isDone: false
       },
       {
         index: 15,
         name: 'Turkey',
+        koreanName: '터키',
         img: require('../assets/flags/turkey.png'),
         isDone: false
       },
       {
         index: 16,
         name: 'United Kingdom',
+        koreanName: '영국',
         img: require('../assets/flags/united_kingdom.png'),
         isDone: false
       },
       {
         index: 17,
         name: 'United States',
+        koreanName: '미국',
         img: require('../assets/flags/united_states.png'),
         isDone: false
       },
       {
         index: 18,
         name: 'Bangladesh',
+        koreanName: '방글라데시',
         img: require('../assets/flags/bangladesh.png'),
         isDone: false
       },
       {
         index: 19,
         name: 'Vietnam',
+        koreanName: '베트남',
         img: require('../assets/flags/vietnam.png'),
         isDone: false
       },
       {
         index: 20,
         name: 'Saudi Arabia',
+        koreanName: '남아라비아 연방',
         img: require('../assets/flags/saudi_arabia.png'),
         isDone: false
       },
       {
         index: 21,
         name: 'Peru',
+        koreanName: '페루',
         img: require('../assets/flags/peru.png'),
         isDone: false
       },
       {
         index: 22,
         name: 'Iraq',
+        koreanName: '이라크',
         img: require('../assets/flags/iraq.png'),
         isDone: false
       },
       {
         index: 23,
         name: 'Philipinnes',
+        koreanName: '필리핀',
         img: require('../assets/flags/philipinnes.png'),
         isDone: false
       },
       {
         index: 24,
         name: 'Israel',
+        koreanName: '이스라엘',
         img: require('../assets/flags/israel.png'),
         isDone: false
       },
       {
         index: 25,
         name: 'Argentina',
+        koreanName: '아르한티나',
         img: require('../assets/flags/argentina.png'),
         isDone: false
       },
       {
         index: 26,
         name: 'New Zealand',
+        koreanName: '뉴질랜드',
         img: require('../assets/flags/new_zealand.png'),
         isDone: false
       },
       {
         index: 27,
         name: 'Portugal',
+        koreanName: '포루투갈',
         img: require('../assets/flags/portugal.png'),
         isDone: false
       },
       {
         index: 28,
         name: 'Denmark',
+        koreanName: '덴마크',
         img: require('../assets/flags/denmark.png'),
         isDone: false
       },
       {
         index: 29,
         name: 'Belgium',
+        koreanName: '벨기에',
         img: require('../assets/flags/belgium.png'),
         isDone: false
       },
       {
         index: 30,
         name: 'Egypt',
+        koreanName: '이집트',
         img: require('../assets/flags/egypt.png'),
         isDone: false
       },
       {
         index: 31,
         name: 'Thailand',
+        koreanName: '태국',
         img: require('../assets/flags/thailand.png'),
         isDone: false
       },
       {
         index: 32,
         name: 'Chile',
+        koreanName: '칠레',
         img: require('../assets/flags/chile.png'),
         isDone: false
       },
       {
         index: 33,
         name: 'Sweden',
+        koreanName: '스웨덴',
         img: require('../assets/flags/sweden.png'),
         isDone: false
       },
       {
         index: 34,
         name: 'Cuba',
+        koreanName: '쿠바',
         img: require('../assets/flags/cuba.png'),
         isDone: false
       },
       {
         index: 35,
         name: 'Norway',
+        koreanName: '노르웨이',
         img: require('../assets/flags/norway.png'),
         isDone: false
       },
       {
         index: 36,
         name: 'Switzerland',
+        koreanName: '스위스',
         img: require('../assets/flags/switzerland.png'),
         isDone: false
       },
       {
         index: 37,
         name: 'Netherlands',
+        koreanName: '네덜란드',
         img: require('../assets/flags/netherlands.png'),
         isDone: false
       },
       {
         index: 38,
         name: 'Iran',
+        koreanName: '이란',
         img: require('../assets/flags/iran.png'),
         isDone: false
       },
       {
         index: 39,
         name: 'Greece',
+        koreanName: '그리스',
         img: require('../assets/flags/greece.png'),
         isDone: false
       },
       {
         index: 40,
         name: 'Colombia',
+        koreanName: '콜롬비아',
         img: require('../assets/flags/colombia.png'),
         isDone: false
       },
       {
         index: 41,
         name: 'Poland',
+        koreanName: '폴란드',
         img: require('../assets/flags/poland.png'),
         isDone: false
       },
       {
         index: 42,
         name: 'South Sudan',
+        koreanName: '남수단',
         img: require('../assets/flags/south_sudan.png'),
         isDone: false
       },
       {
         index: 43,
         name: 'Sudan',
+        koreanName: '수단',
         img: require('../assets/flags/sudan.png'),
         isDone: false
       },
       {
         index: 44,
         name: 'Estonia',
+        koreanName: '에스토니아',
         img: require('../assets/flags/estonia.png'),
         isDone: false
       },
       {
         index: 45,
         name: 'Kazakhstan',
+        koreanName: '카자흐스탄',
         img: require('../assets/flags/kazakhstan.png'),
         isDone: false
       },
       {
         index: 46,
         name: 'Malaysia',
+        koreanName: '말레이시아',
         img: require('../assets/flags/malaysia.png'),
         isDone: false
       },
       {
         index: 47,
         name: 'Pakistan',
+        koreanName: '파키스탄',
         img: require('../assets/flags/pakistan.png'),
         isDone: false
       },
       {
         index: 48,
         name: 'Indonesia',
+        koreanName: '인도네시아',
         img: require('../assets/flags/indonesia.png'),
         isDone: false
       },
       {
         index: 49,
         name: 'Singapore',
+        koreanName: '싱가포르',
         img: require('../assets/flags/singapore.png'),
         isDone: false
       },
       {
         index: 50,
         name: 'Nepal',
+        koreanName: '네팔',
         img: require('../assets/flags/nepal.png'),
         isDone: false
       },
       {
         index: 51,
         name: 'Palau',
+        koreanName: '팔라우',
         img: require('../assets/flags/palau.png'),
         isDone: false
       },
       {
         index: 52,
         name: 'Panama',
+        koreanName: '파나마',
         img: require('../assets/flags/panama.png'),
         isDone: false
       },
       {
         index: 53,
         name: 'North Korea',
+        koreanName: '북한',
         img: require('../assets/flags/north_korea.png'),
         isDone: false
       },
       {
         index: 54,
         name: 'South Africa',
+        koreanName: '남아프리카',
         img: require('../assets/flags/south_africa.png'),
         isDone: false
       },
       {
         index: 55,
         name: 'Morocco',
-        img: require('../assets/flags/morocco'),
+        koreanName: '모르코',
+        img: require('../assets/flags/morocco.png'),
         isDone: false
       },
       ]
     }
   },
   created() {
+    this.refreshName();
     for(var i = 0; i <= this.$store.state.maxQuantity; i++) {
       this.newQuiz();
     }
@@ -420,9 +490,40 @@ export default {
   computed: {
     displayLevel: function() {
       return this.settings.curQuestionNum + '/' + this.$store.state.maxQuantity
-    }
+    },
+  
   },
   methods:{
+    refreshName: function() {
+      switch(this.$store.state.Language) {
+        case 'English':
+          this.names.title = 'Choose proper flag!'
+          this.names.previousButton = 'PREVIOUS'
+          this.names.nextButton = 'NEXT'
+          this.names.puaseTitle = 'PAUSE'
+          this.names.resumeButton = 'RESUME'
+          this.names.optionButton = 'OPTION'
+          this.names.homeButton = 'HOME'
+          this.names.scoreBoardTitle = 'You have finished all questions!'
+          this.names.wrongAnswers = 'Your incorrect answers'
+          this.names.startagainButton = 'START AGAIN'
+          this.names.sHomeButton = 'BACK TO HOME'
+          break;
+        case 'Korean':
+          this.names.title = '올바른 국기를 선택하세요!'
+          this.names.previousButton = '이전문제'
+          this.names.nextButton = '다음문제'
+          this.names.puaseTitle = '일시정지'
+          this.names.resumeButton = '재게하기'
+          this.names.optionButton = '옵션'
+          this.names.homeButton = '홈으로 가기'
+           this.names.scoreBoardTitle = '모든 문제를 끝냈습니다!'
+          this.names.wrongAnswers = '당신이 틀린 문제'
+          this.names.startagainButton = '다시 시작하기'
+          this.names.sHomeButton = '홈으로 돌아가기'
+          break;
+      }
+    },
     checkAnswer: function(event) {
       //put the targeted button id inside of variable.
       var targetedId = event.srcElement.id;
@@ -437,7 +538,6 @@ export default {
           this.settings.isXshown = true;
           //put incorrect flag's name into scoreBoard's incorrectAnswers
           let incorrectName = this.questions[this.settings.curQuestionNum].question;
-          incorrectName = incorrectName.slice(7, 20);
           this.scoreBoard.incorrectAnswers.push(incorrectName);
           this.settings.curQuestionNum++; 
         }
@@ -499,11 +599,14 @@ export default {
       cloneArray.splice(pos, 1);
       
 
+      // Declare question based on language
+  
+
       // based on the position number, it assign the images
       switch(answerNum) {
         case 1:
           this.questions.push({
-            question: `Choose ${chosenArray.name}`,
+            question: this.$store.state.Language == 'English' ? `${chosenArray.name}` : `${chosenArray.koreanName}`,
             answer: `img10${answerNum}`,
             img1: chosenArray.img,
             img2: img2.img,
@@ -513,7 +616,7 @@ export default {
           break;
         case 2:
           this.questions.push({
-            question: `Choose ${chosenArray.name}`,
+            question: this.$store.state.Language == 'English' ? `${chosenArray.name}` : `${chosenArray.koreanName}`,
             answer: `img10${answerNum}`,
             img1: img1.img,
             img2: chosenArray.img,
@@ -523,7 +626,7 @@ export default {
           break;
         case 3:
           this.questions.push({
-            question: `Choose ${chosenArray.name}`,
+            question: this.$store.state.Language == 'English' ? `${chosenArray.name}` : `${chosenArray.koreanName}`,
             answer: `img10${answerNum}`,
             img1: img1.img,
             img2: img2.img,
@@ -533,7 +636,7 @@ export default {
           break;
         case 4:
           this.questions.push({
-            question: `Choose ${chosenArray.name}`,
+            question: this.$store.state.Language == 'English' ? `${chosenArray.name}` : `${chosenArray.koreanName}`,
             answer: `img10${answerNum}`,
             img1: img1.img,
             img2: img2.img,

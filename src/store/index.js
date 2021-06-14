@@ -7,7 +7,8 @@ export default new Vuex.Store({
   state: {
     maxQuantity: 10,
     isSound: true,
-    isEffect: true
+    isEffect: true,
+    Language: 'English',
   },
   mutations: {
   },
