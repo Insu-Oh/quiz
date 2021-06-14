@@ -30,15 +30,15 @@ export default ({
       startButton: '',
       homeButton: '',
     }
-},
-created() {
-    this.refreshName();
+  },
+  created() {
+      this.refreshName();
   },
   methods: {
     refreshName: function() {
       switch(this.$store.state.Language) {
         case 'English':
-          this.title = 'Select your name'
+          this.title = 'Select your level'
           this.quantityLabel = 'QUANTITY'
           this.startButton = 'START'
           this.homeButton = 'BACK TO HOME'
@@ -48,6 +48,12 @@ created() {
           this.quantityLabel = '갯수'
           this.startButton = '시작'
           this.homeButton = '홈으로 돌아가기'
+          break;
+        case 'Japanese':
+          this.title = '難易度選択'
+          this.quantityLabel = '本数'
+          this.startButton = '出発する'
+          this.homeButton = 'ホームに戻る'
           break;
       }
     }

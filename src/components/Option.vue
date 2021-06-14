@@ -48,7 +48,8 @@ export default {
       homeButton: '홈페이지로 돌아가기',
       languages: [
         'Korean',
-        'English'
+        'English',
+        'Japanese'
       ]
     }
   },
@@ -71,6 +72,13 @@ export default {
           this.effectLabel = '이펙트'
           this.LanguageLabel = '언어'
           this.homeButton = '홈으로 돌아가기'
+          break;
+        case 'Japanese':
+          this.title = 'オプション'
+          this.soundLabel = '効果音'
+          this.effectLabel = 'エフェクト'
+          this.LanguageLabel = '言語'
+          this.homeButton = 'ホームに戻る'
           break;
       }
     }

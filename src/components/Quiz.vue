@@ -16,10 +16,10 @@
       <!-- Answers -->
       <transition name="flags" mode="out-in" :css="$store.state.isEffect">
         <div class="flags" :key="settings.curQuestionNum">
-          <img id="img101" :src="questions[settings.curQuestionNum].img1" alt="" @click="checkAnswer">
-          <img id="img102" :src="questions[settings.curQuestionNum].img2" alt="" @click="checkAnswer">
-          <img id="img103" :src="questions[settings.curQuestionNum].img3" alt="" @click="checkAnswer">
-          <img id="img104" :src="questions[settings.curQuestionNum].img4" alt="" @click="checkAnswer">
+          <img id="img101" :src="questions[settings.curQuestionNum].img1" @click="checkAnswer">
+          <img id="img102" :src="questions[settings.curQuestionNum].img2" @click="checkAnswer">
+          <img id="img103" :src="questions[settings.curQuestionNum].img3" @click="checkAnswer">
+          <img id="img104" :src="questions[settings.curQuestionNum].img4" @click="checkAnswer">
         </div>
       </transition>
     </div>
@@ -522,6 +522,19 @@ export default {
           this.names.startagainButton = '다시 시작하기'
           this.names.sHomeButton = '홈으로 돌아가기'
           break;
+        case 'Japanese':
+          this.names.title = '正しい国旗を選択してください！'
+          this.names.previousButton = '移転問題'
+          this.names.nextButton = '次の問題'
+          this.names.puaseTitle = '一時停止'
+          this.names.resumeButton = '寝かしつける'
+          this.names.optionButton = 'オプション'
+          this.names.homeButton = 'ホームに行くこと'
+           this.names.scoreBoardTitle = 'すべての問題を終わらせました。'
+          this.names.wrongAnswers = 'あなたの間違い'
+          this.names.startagainButton = 'やりなおす'
+          this.names.sHomeButton = 'ホームに戻る'
+          break;
       }
     },
     checkAnswer: function(event) {
@@ -598,15 +611,13 @@ export default {
       pos = cloneArray.map(function(e) { return e.name; }).indexOf(img4.name);
       cloneArray.splice(pos, 1);
       
-
-      // Declare question based on language
-  
+      let q = (this.$store.state.Language == 'English') ? chosenArray.name : (this.$store.state.Language == 'Korean') ? chosenArray.koreanName : (this.$store.state.Language == 'Japanese') ? chosenArray.koreanName : '';
 
       // based on the position number, it assign the images
       switch(answerNum) {
         case 1:
           this.questions.push({
-            question: this.$store.state.Language == 'English' ? `${chosenArray.name}` : `${chosenArray.koreanName}`,
+            question: q,
             answer: `img10${answerNum}`,
             img1: chosenArray.img,
             img2: img2.img,
@@ -616,7 +627,7 @@ export default {
           break;
         case 2:
           this.questions.push({
-            question: this.$store.state.Language == 'English' ? `${chosenArray.name}` : `${chosenArray.koreanName}`,
+            question: q,
             answer: `img10${answerNum}`,
             img1: img1.img,
             img2: chosenArray.img,
@@ -626,7 +637,7 @@ export default {
           break;
         case 3:
           this.questions.push({
-            question: this.$store.state.Language == 'English' ? `${chosenArray.name}` : `${chosenArray.koreanName}`,
+            question: q,
             answer: `img10${answerNum}`,
             img1: img1.img,
             img2: img2.img,
@@ -636,7 +647,7 @@ export default {
           break;
         case 4:
           this.questions.push({
-            question: this.$store.state.Language == 'English' ? `${chosenArray.name}` : `${chosenArray.koreanName}`,
+            question: q,
             answer: `img10${answerNum}`,
             img1: img1.img,
             img2: img2.img,

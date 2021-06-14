@@ -35,6 +35,10 @@ export default {
           this.startButton = '시작'
           this.optionButton = '옵션'
           break;
+        case 'Japanese':
+           this.title = "国歌クイズ",
+           this.startButton = '出発する',
+           this.optionButton = "オプション"
       }
   }
 }
