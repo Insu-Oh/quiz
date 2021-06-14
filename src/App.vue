@@ -387,10 +387,19 @@ input:checked + .slider:before {
   text-align: center;
 }
 
-.scoreBoard .scoreBoardBox ul li {
+.scoreBoard .scoreBoardBox ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap ;
+}
+
+.scoreBoard .scoreBoardBox ul li {
+  flex: 1 0 33%; 
+}
+
+.scoreBoard .scoreBoardBox ul img {
+  width: 50px;
+  height: 30px;
 }
 
 /* Scoreboard transition */

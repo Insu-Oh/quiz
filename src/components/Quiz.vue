@@ -44,8 +44,11 @@
       <div class="scoreBoardBox">
         <h2>{{names.scoreBoardTitle}}</h2>
           <p>{{names.wrongAnswers}} 
-            <ul>
-              <li v-for="name in scoreBoard.incorrectAnswers" :key="name">{{name}}</li>
+            <ul v-for="item in scoreBoard.incorrectAnswers" :key="item">
+              <li>
+              <img :src="item.img" alt="" class="scoreBoardImg">
+                {{item.name}}
+              </li>
             </ul>
             </p>
           <router-link to="/level" :class="{hover: $store.state.isEffect}">{{names.startagainButton}}</router-link>
@@ -607,7 +610,10 @@ export default {
           this.settings.isXshown = true;
           //put incorrect flag's name into scoreBoard's incorrectAnswers
           let incorrectName = this.questions[this.settings.curQuestionNum].question;
-          this.scoreBoard.incorrectAnswers.push(incorrectName);
+          this.scoreBoard.incorrectAnswers.push({
+            name: incorrectName,
+            img: this.questions[this.settings.curQuestionNum].img
+            });
           this.settings.curQuestionNum++; 
         }
       } else {
@@ -675,6 +681,7 @@ export default {
           this.questions.push({
             question: q,
             answer: `img10${answerNum}`,
+            img: chosenArray.img,
             img1: chosenArray.img,
             img2: img2.img,
             img3: img3.img,
@@ -685,6 +692,7 @@ export default {
           this.questions.push({
             question: q,
             answer: `img10${answerNum}`,
+            img: chosenArray.img,
             img1: img1.img,
             img2: chosenArray.img,
             img3: img3.img,
@@ -695,6 +703,7 @@ export default {
           this.questions.push({
             question: q,
             answer: `img10${answerNum}`,
+            img: chosenArray.img,
             img1: img1.img,
             img2: img2.img,
             img3: chosenArray.img,
@@ -705,6 +714,7 @@ export default {
           this.questions.push({
             question: q,
             answer: `img10${answerNum}`,
+            img: chosenArray.img,
             img1: img1.img,
             img2: img2.img,
             img3: img3.img,
