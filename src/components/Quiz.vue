@@ -90,6 +90,7 @@ export default {
         index: 0,
         name: 'Australia',
         koreanName: '호주',
+        japaneseName: 'オーストラリア',
         img: require('../assets/flags/australia.png'),
         isDone: false
       },
@@ -97,6 +98,7 @@ export default {
         index: 1,
         name: 'Brazil',
         koreanName: '브라질',
+        japaneseName: 'ブラジル',
         img: require('../assets/flags/brazil.png'),
         isDone: false
       },
@@ -104,6 +106,7 @@ export default {
         index: 2,
         name: 'Canada',
         koreanName: '캐나다',
+        japaneseName: 'カナダ',
         img: require('../assets/flags/canada.png'),
         isDone: false
       },
@@ -111,6 +114,7 @@ export default {
         index: 3,
         name: 'China',
         koreanName: '중국',
+        japaneseName: '中国',
         img: require('../assets/flags/china.png'),
         isDone: false
       },
@@ -118,6 +122,7 @@ export default {
         index: 4,
         name: 'France',
         koreanName: '프랑스',
+        japaneseName: 'フランス',
         img: require('../assets/flags/france.png'),
         isDone: false
       },
@@ -125,6 +130,7 @@ export default {
         index: 5,
         name: 'Germany',
         koreanName: '독일',
+        japaneseName: 'ドイツ',
         img: require('../assets/flags/germany.png'),
         isDone: false
       },
@@ -132,6 +138,7 @@ export default {
         index: 6,
         name: 'India',
         koreanName: '인도',
+        japaneseName: 'インド',
         img: require('../assets/flags/india.png'),
         isDone: false
       },
@@ -139,6 +146,7 @@ export default {
         index: 7,
         name: 'Italy',
         koreanName: '이탈리아',
+        japaneseName: 'イタリア',
         img: require('../assets/flags/italy.png'),
         isDone: false
       },
@@ -146,6 +154,7 @@ export default {
         index: 8,
         name: 'Japan',
         koreanName: '일본',
+        japaneseName: '日本',
         img: require('../assets/flags/japan.png'),
         isDone: false
       },
@@ -153,6 +162,7 @@ export default {
         index: 9,
         name: 'Libya',
         koreanName: '리비아',
+        japaneseName: 'リビア',
         img: require('../assets/flags/libya.png'),
         isDone: false
       },
@@ -160,6 +170,7 @@ export default {
         index: 10,
         name: 'Mexico',
         koreanName: '맥시코',
+        japaneseName: 'メキシコ',
         img: require('../assets/flags/mexico.png'),
         isDone: false
       },
@@ -167,6 +178,7 @@ export default {
         index: 11,
         name: 'Mongolia',
         koreanName: '몽골',
+        japaneseName: 'モンゴル',
         img: require('../assets/flags/mongolia.png'),
         isDone: false
       },
@@ -174,6 +186,7 @@ export default {
         index: 12,
         name: 'Russia',
         koreanName: '러시아',
+        japaneseName: 'ロシア',
         img: require('../assets/flags/russia.png'),
         isDone: false
       },
@@ -181,6 +194,7 @@ export default {
         index: 13,
         name: 'South Korea',
         koreanName: '대한민국',
+        japaneseName: '大韓民国',
         img: require('../assets/flags/south_korea.png'),
         isDone: false
       },
@@ -188,6 +202,7 @@ export default {
         index: 14,
         name: 'Spain',
         koreanName: '스페인',
+        japaneseName: 'スペイン',
         img: require('../assets/flags/spain.png'),
         isDone: false
       },
@@ -195,6 +210,7 @@ export default {
         index: 15,
         name: 'Turkey',
         koreanName: '터키',
+        japaneseName: '七面鳥',
         img: require('../assets/flags/turkey.png'),
         isDone: false
       },
@@ -202,6 +218,7 @@ export default {
         index: 16,
         name: 'United Kingdom',
         koreanName: '영국',
+        japaneseName: 'イングランド',
         img: require('../assets/flags/united_kingdom.png'),
         isDone: false
       },
@@ -209,6 +226,7 @@ export default {
         index: 17,
         name: 'United States',
         koreanName: '미국',
+        japaneseName: '英国',
         img: require('../assets/flags/united_states.png'),
         isDone: false
       },
@@ -216,6 +234,7 @@ export default {
         index: 18,
         name: 'Bangladesh',
         koreanName: '방글라데시',
+        japaneseName: 'バングラデシュ',
         img: require('../assets/flags/bangladesh.png'),
         isDone: false
       },
@@ -223,6 +242,7 @@ export default {
         index: 19,
         name: 'Vietnam',
         koreanName: '베트남',
+        japaneseName: 'ビエトナム',
         img: require('../assets/flags/vietnam.png'),
         isDone: false
       },
@@ -230,6 +250,7 @@ export default {
         index: 20,
         name: 'Saudi Arabia',
         koreanName: '남아라비아 연방',
+        japaneseName: 'サウジアラビア',
         img: require('../assets/flags/saudi_arabia.png'),
         isDone: false
       },
@@ -237,6 +258,7 @@ export default {
         index: 21,
         name: 'Peru',
         koreanName: '페루',
+        japaneseName: 'ペルー',
         img: require('../assets/flags/peru.png'),
         isDone: false
       },
@@ -244,6 +266,7 @@ export default {
         index: 22,
         name: 'Iraq',
         koreanName: '이라크',
+        japaneseName: 'イラク',
         img: require('../assets/flags/iraq.png'),
         isDone: false
       },
@@ -251,6 +274,7 @@ export default {
         index: 23,
         name: 'Philipinnes',
         koreanName: '필리핀',
+        japaneseName: 'フィリピン',
         img: require('../assets/flags/philipinnes.png'),
         isDone: false
       },
@@ -258,6 +282,7 @@ export default {
         index: 24,
         name: 'Israel',
         koreanName: '이스라엘',
+        japaneseName: 'イスラエル',
         img: require('../assets/flags/israel.png'),
         isDone: false
       },
@@ -265,6 +290,7 @@ export default {
         index: 25,
         name: 'Argentina',
         koreanName: '아르한티나',
+        japaneseName: 'アルゼンチン',
         img: require('../assets/flags/argentina.png'),
         isDone: false
       },
@@ -272,6 +298,7 @@ export default {
         index: 26,
         name: 'New Zealand',
         koreanName: '뉴질랜드',
+        japaneseName: 'ニュージーランド',
         img: require('../assets/flags/new_zealand.png'),
         isDone: false
       },
@@ -279,6 +306,7 @@ export default {
         index: 27,
         name: 'Portugal',
         koreanName: '포루투갈',
+        japaneseName: 'ポルトガル',
         img: require('../assets/flags/portugal.png'),
         isDone: false
       },
@@ -286,6 +314,7 @@ export default {
         index: 28,
         name: 'Denmark',
         koreanName: '덴마크',
+        japaneseName: 'デンマーク',
         img: require('../assets/flags/denmark.png'),
         isDone: false
       },
@@ -293,6 +322,7 @@ export default {
         index: 29,
         name: 'Belgium',
         koreanName: '벨기에',
+        japaneseName: 'ベルギー',
         img: require('../assets/flags/belgium.png'),
         isDone: false
       },
@@ -300,6 +330,7 @@ export default {
         index: 30,
         name: 'Egypt',
         koreanName: '이집트',
+        japaneseName: 'エジプト',
         img: require('../assets/flags/egypt.png'),
         isDone: false
       },
@@ -307,6 +338,7 @@ export default {
         index: 31,
         name: 'Thailand',
         koreanName: '태국',
+        japaneseName: 'タイ',
         img: require('../assets/flags/thailand.png'),
         isDone: false
       },
@@ -314,6 +346,7 @@ export default {
         index: 32,
         name: 'Chile',
         koreanName: '칠레',
+        japaneseName: 'チリ',
         img: require('../assets/flags/chile.png'),
         isDone: false
       },
@@ -321,6 +354,7 @@ export default {
         index: 33,
         name: 'Sweden',
         koreanName: '스웨덴',
+        japaneseName: 'スウェーデン',
         img: require('../assets/flags/sweden.png'),
         isDone: false
       },
@@ -328,6 +362,7 @@ export default {
         index: 34,
         name: 'Cuba',
         koreanName: '쿠바',
+        japaneseName: 'キューバ',
         img: require('../assets/flags/cuba.png'),
         isDone: false
       },
@@ -335,6 +370,7 @@ export default {
         index: 35,
         name: 'Norway',
         koreanName: '노르웨이',
+        japaneseName: 'ノルウェー',
         img: require('../assets/flags/norway.png'),
         isDone: false
       },
@@ -342,6 +378,7 @@ export default {
         index: 36,
         name: 'Switzerland',
         koreanName: '스위스',
+        japaneseName: 'スイス',
         img: require('../assets/flags/switzerland.png'),
         isDone: false
       },
@@ -349,6 +386,7 @@ export default {
         index: 37,
         name: 'Netherlands',
         koreanName: '네덜란드',
+        japaneseName: 'オランダ',
         img: require('../assets/flags/netherlands.png'),
         isDone: false
       },
@@ -356,6 +394,7 @@ export default {
         index: 38,
         name: 'Iran',
         koreanName: '이란',
+        japaneseName: 'イラン',
         img: require('../assets/flags/iran.png'),
         isDone: false
       },
@@ -363,6 +402,7 @@ export default {
         index: 39,
         name: 'Greece',
         koreanName: '그리스',
+        japaneseName: 'ギリシャ',
         img: require('../assets/flags/greece.png'),
         isDone: false
       },
@@ -370,6 +410,7 @@ export default {
         index: 40,
         name: 'Colombia',
         koreanName: '콜롬비아',
+        japaneseName: 'コロンビア',
         img: require('../assets/flags/colombia.png'),
         isDone: false
       },
@@ -377,6 +418,7 @@ export default {
         index: 41,
         name: 'Poland',
         koreanName: '폴란드',
+        japaneseName: 'ポーランド',
         img: require('../assets/flags/poland.png'),
         isDone: false
       },
@@ -384,6 +426,7 @@ export default {
         index: 42,
         name: 'South Sudan',
         koreanName: '남수단',
+        japaneseName: '南スーダン',
         img: require('../assets/flags/south_sudan.png'),
         isDone: false
       },
@@ -391,6 +434,7 @@ export default {
         index: 43,
         name: 'Sudan',
         koreanName: '수단',
+        japaneseName: 'スーダン',
         img: require('../assets/flags/sudan.png'),
         isDone: false
       },
@@ -398,6 +442,7 @@ export default {
         index: 44,
         name: 'Estonia',
         koreanName: '에스토니아',
+        japaneseName: 'エストニア',
         img: require('../assets/flags/estonia.png'),
         isDone: false
       },
@@ -405,6 +450,7 @@ export default {
         index: 45,
         name: 'Kazakhstan',
         koreanName: '카자흐스탄',
+        japaneseName: 'カザフスタン',
         img: require('../assets/flags/kazakhstan.png'),
         isDone: false
       },
@@ -412,6 +458,7 @@ export default {
         index: 46,
         name: 'Malaysia',
         koreanName: '말레이시아',
+        japaneseName: 'マレーシア',
         img: require('../assets/flags/malaysia.png'),
         isDone: false
       },
@@ -419,6 +466,7 @@ export default {
         index: 47,
         name: 'Pakistan',
         koreanName: '파키스탄',
+        japaneseName: 'パキスタン',
         img: require('../assets/flags/pakistan.png'),
         isDone: false
       },
@@ -426,6 +474,7 @@ export default {
         index: 48,
         name: 'Indonesia',
         koreanName: '인도네시아',
+        japaneseName: 'インドネシア',
         img: require('../assets/flags/indonesia.png'),
         isDone: false
       },
@@ -433,6 +482,7 @@ export default {
         index: 49,
         name: 'Singapore',
         koreanName: '싱가포르',
+        japaneseName: 'シンガポール',
         img: require('../assets/flags/singapore.png'),
         isDone: false
       },
@@ -440,6 +490,7 @@ export default {
         index: 50,
         name: 'Nepal',
         koreanName: '네팔',
+        japaneseName: 'ネパール',
         img: require('../assets/flags/nepal.png'),
         isDone: false
       },
@@ -447,6 +498,7 @@ export default {
         index: 51,
         name: 'Palau',
         koreanName: '팔라우',
+        japaneseName: 'パラオ',
         img: require('../assets/flags/palau.png'),
         isDone: false
       },
@@ -454,6 +506,7 @@ export default {
         index: 52,
         name: 'Panama',
         koreanName: '파나마',
+        japaneseName: 'パナマ',
         img: require('../assets/flags/panama.png'),
         isDone: false
       },
@@ -461,6 +514,7 @@ export default {
         index: 53,
         name: 'North Korea',
         koreanName: '북한',
+        japaneseName: '朝鮮民主主義人民共和国',
         img: require('../assets/flags/north_korea.png'),
         isDone: false
       },
@@ -468,6 +522,7 @@ export default {
         index: 54,
         name: 'South Africa',
         koreanName: '남아프리카',
+        japaneseName: '南アフリカ',
         img: require('../assets/flags/south_africa.png'),
         isDone: false
       },
@@ -475,6 +530,7 @@ export default {
         index: 55,
         name: 'Morocco',
         koreanName: '모르코',
+        japaneseName: 'モロッコ',
         img: require('../assets/flags/morocco.png'),
         isDone: false
       },
@@ -611,7 +667,7 @@ export default {
       pos = cloneArray.map(function(e) { return e.name; }).indexOf(img4.name);
       cloneArray.splice(pos, 1);
       
-      let q = (this.$store.state.Language == 'English') ? chosenArray.name : (this.$store.state.Language == 'Korean') ? chosenArray.koreanName : (this.$store.state.Language == 'Japanese') ? chosenArray.koreanName : '';
+      let q = (this.$store.state.Language == 'English') ? chosenArray.name : (this.$store.state.Language == 'Korean') ? chosenArray.koreanName : (this.$store.state.Language == 'Japanese') ? chosenArray.japaneseName : '';
 
       // based on the position number, it assign the images
       switch(answerNum) {
